@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Pesca Restaurante Bar | Mariscos, cócteles y orquesta en vivo en Cartagena</title>
+<meta name="description" content="Pescados y mariscos, cócteles y orquesta en vivo en El Bosque, Cartagena. Parqueadero gratis, cumpleaños, eventos y partidos. Reserva en línea o por WhatsApp.">
+<meta name="theme-color" content="#07111F">
+<meta property="og:title" content="La Pesca Restaurante Bar · Cartagena">
+<meta property="og:description" content="Mariscos, cócteles y orquesta en vivo en El Bosque. Reserva tu mesa.">
+<meta property="og:image" content="assets/img/brindis-grupo.jpg">
+<meta property="og:type" content="restaurant">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Pesca Restaurante Bar",
+  "image": "assets/img/brindis-grupo.jpg",
+  "servesCuisine": ["Pescados y mariscos", "Caribeña", "Colombiana"],
+  "priceRange": "$$",
+  "telephone": "+57 302 2551907",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Diagonal 21 #45-35, El Bosque",
+    "addressLocality": "Cartagena de Indias",
+    "addressRegion": "Bolívar",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday"], "opens": "11:30", "closes": "21:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday"], "opens": "11:30", "closes": "22:30"}
+  ],
+  "acceptsReservations": "https://go.jeicy.co/lapesca",
+  "sameAs": ["https://www.instagram.com/la_pescactg", "https://www.facebook.com/lapescactg/"]
+}
+</script>
+
+<style>
+:root{
+  --navy-950:#07111F;
+  --navy-900:#0B1B30;
+  --navy-800:#12284A;
+  --navy-700:#1B3A66;
+  --amber:#E9A23B;
+  --amber-soft:#F4C77B;
+  --coral:#E5533D;
+  --aqua:#2FB7B0;
+  --cream:#F6EEE2;
+  --text:#F6EEE2;
+  --muted:#A9B4C6;
+  --line:rgba(246,238,226,.12);
+  --radius:18px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Manrope", system-ui, sans-serif;
+  --wa:#25D366;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy-950);color:var(--text);font:400 16px/1.6 var(--font-body);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.eyebrow{font:600 12px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,58px)}
+h2 em,h1 em{font-style:italic;color:var(--amber-soft)}
+.lead{color:var(--muted);font-size:clamp(16px,1.6vw,18px);max-width:56ch}
+section{padding:clamp(72px,10vw,128px) 0;position:relative}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s var(--ease),background .2s,box-shadow .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--amber);color:var(--navy-950);box-shadow:0 10px 30px -10px rgba(233,162,59,.7)}
+.btn-ghost{border:1px solid rgba(246,238,226,.35);backdrop-filter:blur(8px);background:rgba(7,17,31,.25)}
+.btn svg{width:18px;height:18px;flex:none}
+@media (hover:hover){
+  .btn-primary:hover{background:var(--amber-soft)}
+  .btn-ghost:hover{background:rgba(246,238,226,.1)}
+}
+
+/* Navegación */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(7,17,31,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font:italic 600 28px/1 var(--font-display);letter-spacing:-.02em}
+.logo small{font-size:9.5px;letter-spacing:.32em;color:var(--amber);margin-top:4px;font-weight:600}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:600;color:rgba(246,238,226,.8)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--amber-soft)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media (max-width:900px){.nav-links{display:none}}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,8vw,96px);overflow:hidden}
+.hero video,.hero .hero-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(7,17,31,.55) 0%,rgba(7,17,31,.15) 35%,rgba(7,17,31,.75) 72%,var(--navy-950) 100%),
+  radial-gradient(80% 60% at 15% 85%,rgba(7,17,31,.7),transparent)}
+.hero .wrap{position:relative;z-index:2}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(7,17,31,.5);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 4px rgba(47,183,176,.25)}
+.status.closed i{background:var(--coral);box-shadow:0 0 0 4px rgba(229,83,61,.25)}
+.hero h1{font-size:clamp(46px,8.4vw,112px);margin:22px 0 20px;max-width:12ch}
+.hero .lead{color:rgba(246,238,226,.85);margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.ratings{display:flex;flex-wrap:wrap;gap:18px;margin-top:36px;font-size:13px;color:var(--muted)}
+.ratings span{display:flex;align-items:center;gap:6px}
+.ratings strong{color:var(--text);font-size:15px}
+.star{color:var(--amber)}
+
+/* Cinta */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--navy-900)}
+.marquee-track{display:flex;gap:48px;width:max-content;animation:marquee 38s linear infinite;font:italic 400 clamp(20px,2.4vw,28px)/1 var(--font-display);color:rgba(246,238,226,.75)}
+.marquee-track span::after{content:"✦";font-style:normal;color:var(--amber);margin-left:48px;font-size:.6em;vertical-align:middle}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* Encabezado de sección */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head h2{margin-top:14px}
+.sec-head .lead{margin-top:16px}
+
+/* Carrusel */
+.carousel-nav{display:flex;gap:10px}
+.carousel-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.carousel-nav button:hover{background:rgba(246,238,226,.08);border-color:rgba(246,238,226,.3)}
+.carousel-nav svg{width:20px;height:20px}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px max(16px,(100% - 1180px)/2) 8px;scroll-padding-inline:max(16px,(100% - 1180px)/2);overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.card{flex:none;width:min(300px,76vw);scroll-snap-align:start;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--navy-800);aspect-ratio:3/4}
+.card img,.card video{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+@media (hover:hover){.card:hover img{transform:scale(1.05)}}
+.card figcaption{position:absolute;inset:auto 0 0;padding:56px 20px 20px;background:linear-gradient(transparent,rgba(7,17,31,.92))}
+.card h3{font-size:24px}
+.card p{font-size:14px;color:var(--muted);margin-top:4px}
+.card .tag{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--coral);padding:6px 10px;border-radius:999px}
+.also{margin-top:28px;color:var(--muted);font-size:15px}
+.also b{color:var(--text);font-weight:600}
+
+/* La noche */
+.noche{background:radial-gradient(70% 50% at 80% 20%,rgba(27,58,102,.55),transparent),var(--navy-900)}
+.noche-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mosaic img{border-radius:var(--radius);aspect-ratio:3/4;object-fit:cover;width:100%}
+.mosaic img:nth-child(2){margin-top:48px}
+.mosaic img:nth-child(3){margin-top:-48px}
+.agenda{display:grid;gap:12px;margin-top:32px;padding:0}
+.agenda li{list-style:none;display:flex;gap:18px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(7,17,31,.35)}
+.agenda .day{font:italic 600 15px/1.2 var(--font-display);color:var(--amber-soft);min-width:84px}
+.agenda b{display:block;font-weight:700}
+.agenda span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.noche-grid{grid-template-columns:1fr}.mosaic{order:-1}}
+
+/* Gente (videos verticales) */
+.reel{flex:none;width:min(280px,72vw);aspect-ratio:9/16;scroll-snap-align:start;border-radius:22px;overflow:hidden;position:relative;background:var(--navy-800)}
+.reel video,.reel img{width:100%;height:100%;object-fit:cover}
+.reel figcaption{position:absolute;inset:auto 0 0;padding:64px 18px 18px;background:linear-gradient(transparent,rgba(7,17,31,.9))}
+.reel h3{font-size:22px}
+.reel p{font-size:13px;color:var(--muted);margin-top:2px}
+.sound{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;background:rgba(7,17,31,.55);backdrop-filter:blur(6px);display:grid;place-items:center;border:1px solid var(--line)}
+.sound svg{width:18px;height:18px}
+.reel .pill{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:rgba(7,17,31,.55);backdrop-filter:blur(6px);display:flex;align-items:center;gap:6px}
+.reel .pill i{width:6px;height:6px;border-radius:50%;background:var(--coral)}
+
+/* Eventos */
+.eventos-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,72px);align-items:center}
+.eventos-media{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.eventos-media img{width:100%;height:100%;object-fit:cover}
+.eventos-media .badge{position:absolute;left:18px;bottom:18px;right:18px;padding:16px 18px;border-radius:14px;background:rgba(7,17,31,.7);backdrop-filter:blur(10px);border:1px solid var(--line);font-size:14px}
+.eventos-media .badge b{font-family:var(--font-display);font-size:20px;font-weight:600;display:block}
+form{display:grid;gap:14px;margin-top:28px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--text);background:rgba(246,238,226,.05);border:1px solid var(--line);border-radius:12px;padding:13px 14px;transition:border-color .2s,background .2s;width:100%}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23A9B4C6' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select option{background:var(--navy-900)}
+input:focus,select,textarea:focus{outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--amber);background:rgba(246,238,226,.08)}
+textarea{resize:vertical;min-height:90px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;position:relative}
+.chips input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.chips label{cursor:pointer;padding:10px 16px;border-radius:999px;border:1px solid var(--line);color:var(--text);font-size:14px;transition:background .2s,border-color .2s,color .2s}
+.chips input:checked+label{background:var(--amber);border-color:var(--amber);color:var(--navy-950)}
+.chips input:focus-visible+label{outline:2px solid var(--amber);outline-offset:2px}
+.btn-wa{background:var(--wa);color:#05310f;justify-content:center}
+.form-note{font-size:13px;color:var(--muted)}
+@media (max-width:860px){.eventos-grid{grid-template-columns:1fr}.eventos-media{aspect-ratio:4/3}}
+@media (max-width:480px){.row{grid-template-columns:1fr}}
+
+/* Opiniones */
+.opiniones{background:var(--navy-900)}
+.scores{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+.score{padding:28px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(7,17,31,.4);display:flex;align-items:center;gap:20px}
+.score .num{font:600 clamp(48px,6vw,64px)/1 var(--font-display);color:var(--amber-soft)}
+.score .stars{color:var(--amber);letter-spacing:2px}
+.score small{display:block;color:var(--muted);font-size:13px}
+.score b{font-size:17px}
+.highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.hl{padding:22px;border-radius:var(--radius);border:1px solid var(--line)}
+.hl svg{width:26px;height:26px;color:var(--amber);margin-bottom:12px}
+.hl b{display:block;font-size:16px}
+.hl span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.highlights{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.scores{grid-template-columns:1fr}}
+
+/* Preguntas frecuentes */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:600;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;flex:none;border-right:2px solid var(--amber);border-bottom:2px solid var(--amber);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s var(--ease)}
+details[open] summary::after{transform:rotate(-135deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:60ch}
+details a{color:var(--amber-soft);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
+
+/* Visítanos */
+.visit-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:24px}
+.visit-card{padding:clamp(24px,4vw,40px);border-radius:24px;border:1px solid var(--line);background:var(--navy-900)}
+.visit-card h3{font-size:28px;margin-bottom:6px}
+.visit-card address{font-style:normal;color:var(--muted)}
+.hours{margin:24px 0;border-collapse:collapse;width:100%;font-size:15px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--amber-soft);font-weight:700}
+.visit-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.map{border-radius:24px;overflow:hidden;min-height:420px;border:1px solid var(--line);background:var(--navy-800)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.3) contrast(1.05)}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}.map,.map iframe{min-height:320px}}
+
+/* Pie */
+footer{padding:56px 0 120px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.social{display:flex;gap:10px}
+.social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s}
+.social a:hover{background:rgba(246,238,226,.08)}
+.social svg{width:18px;height:18px}
+
+/* WhatsApp flotante (escritorio) y barra inferior (móvil) */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .2s var(--ease)}
+.wa-float:hover{transform:scale(1.06)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+.mobile-bar{display:none}
+@media (max-width:720px){
+  .wa-float{display:none}
+  .mobile-bar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;background:rgba(11,27,48,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:20px;padding:6px}
+  .mobile-bar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;font-size:12px;font-weight:700;border-radius:14px}
+  .mobile-bar a:first-child{background:var(--amber);color:var(--navy-950)}
+  .mobile-bar svg{width:20px;height:20px}
+  .nav .btn{display:none}
+}
+
+/* Aparición al hacer scroll */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ===== Modo propuesta ===== */
+.role{display:none}
+.proposal .role{display:flex;gap:12px;align-items:flex-start;max-width:560px;margin-bottom:28px;padding:12px 16px;border:1px dashed var(--amber);border-radius:14px;background:rgba(233,162,59,.08);font-size:14px;color:var(--cream)}
+.proposal .role svg{width:20px;height:20px;flex:none;color:var(--amber);margin-top:1px}
+.role b{color:var(--amber-soft)}
+.proposal-banner{display:none}
+.proposal .proposal-banner{display:block;background:var(--amber);color:var(--navy-950);font-size:13px;font-weight:600;text-align:center;padding:9px 16px;position:relative;z-index:60}
+.proposal .nav{top:var(--banner-h,38px)}
+.proposal .nav.scrolled{top:0}
+.pitch{display:none}
+.proposal .pitch{display:block;background:linear-gradient(160deg,var(--navy-800),var(--navy-950))}
+.pitch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.pitch-item{padding:24px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(7,17,31,.4)}
+.pitch-item b{font-family:var(--font-display);font-size:22px;font-weight:600;display:block;margin-bottom:6px;color:var(--amber-soft)}
+.pitch-item span{color:var(--muted);font-size:15px}
+.pitch-alert{margin-top:32px;padding:24px;border-radius:var(--radius);border-left:4px solid var(--coral);background:rgba(229,83,61,.08);max-width:760px}
+.pitch-alert b{color:var(--text)}
+.pitch-alert p{color:var(--muted)}
+.pitch .sign{margin-top:40px;color:var(--muted);font-size:14px}
+@media (max-width:860px){.pitch-grid{grid-template-columns:1fr}}
+.toggle-proposal{position:fixed;left:24px;bottom:24px;z-index:45;display:flex;align-items:center;gap:10px;padding:10px 16px 10px 12px;border-radius:999px;background:rgba(11,27,48,.92);border:1px solid var(--line);backdrop-filter:blur(10px);font-size:13px;font-weight:600}
+.toggle-proposal .sw{width:34px;height:20px;border-radius:999px;background:rgba(246,238,226,.2);position:relative;transition:background .2s}
+.toggle-proposal .sw::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .25s var(--ease)}
+.proposal .toggle-proposal .sw{background:var(--amber)}
+.proposal .toggle-proposal .sw::after{transform:translateX(14px)}
+@media (max-width:720px){.toggle-proposal{left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom))}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marquee-track{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .card img{transition:none}
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.6c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M16 3.5l1.5-1.5M8 3.5L6.5 2"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></symbol>
+</svg>
+
+<div class="proposal-banner" id="banner">Propuesta para La Pesca · Cada recuadro dorado muestra el trabajo que esta página hace por ustedes, las 24 horas.</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="La Pesca, inicio"><b>La Pesca</b><small>RESTAURANTE · BAR</small></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#cocina">Cocina</a>
+      <a href="#noche">La noche</a>
+      <a href="#gente">Nuestra gente</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a class="btn btn-primary" href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg>Reservar</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Bienvenida">
+    <img class="hero-poster" src="assets/img/lomo-plancha.jpg" alt="" aria-hidden="true">
+    <video id="heroVideo" src="assets/video/v3.mp4" poster="assets/img/lomo-plancha.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="wrap">
+      <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Anfitrión.</b> Recibe a cada persona que llega desde Instagram o Google, le dice si están abiertos y la lleva directo a reservar.</div></div>
+      <span class="status" id="status"><i></i><span>Consultando horario…</span></span>
+      <h1>Mariscos, cócteles y <em>orquesta en vivo.</em></h1>
+      <p class="lead">Sabor caribeño en El Bosque, Cartagena. Ven a almorzar y quédate a celebrar. Tenemos parqueadero gratis.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg>Reservar mesa</a>
+        <a class="btn btn-ghost" data-wa="Hola La Pesca 👋 Quisiera información." href="#"><svg><use href="#i-wa"/></svg>Escríbenos</a>
+      </div>
+      <div class="ratings">
+        <span><span class="star">★</span><strong>4.7</strong> TripAdvisor</span>
+        <span><span class="star">★</span><strong>4.6</strong> Google</span>
+        <span><svg width="16" height="16"><use href="#i-pin"/></svg>Diagonal 21 #45-35, El Bosque</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Ceviche</span><span>Camarones crocantes</span><span>Margaritas</span><span>Orquesta en vivo</span><span>Salmón</span><span>Pulpo</span><span>Partidos</span><span>Cumpleaños</span>
+      <span>Ceviche</span><span>Camarones crocantes</span><span>Margaritas</span><span>Orquesta en vivo</span><span>Salmón</span><span>Pulpo</span><span>Partidos</span><span>Cumpleaños</span>
+    </div>
+  </div>
+
+  <!-- COCINA -->
+  <section id="cocina">
+    <div class="wrap">
+      <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Mesero.</b> Antoja con los platos estrella y entrega el menú completo de Jeicy, que ya usan. No compite con lo que tienen: lo potencia.</div></div>
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">De nuestra cocina</span>
+          <h2>Del mar a tu mesa, <em>con sazón.</em></h2>
+        </div>
+        <div class="carousel-nav" data-for="trackCocina">
+          <button aria-label="Anterior"><svg><use href="#i-left"/></svg></button>
+          <button aria-label="Siguiente"><svg><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="track reveal" id="trackCocina">
+      <figure class="card">
+        <video data-auto src="assets/video/v3.mp4" poster="assets/img/lomo-plancha.jpg" muted loop playsinline preload="none"></video>
+        <span class="tag">En la cocina</span>
+        <figcaption><h3>Hecho al momento</h3><p>Así se prepara lo que llega a tu mesa.</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/img/camarones-apanados.jpg" alt="Camarones crocantes apanados con salsa" loading="lazy">
+        <figcaption><h3>Camarones crocantes</h3><p>Dorados, con salsa de la casa.</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/img/pasta-lomo.jpg" alt="Pasta con lomo y queso" loading="lazy">
+        <figcaption><h3>Pasta con lomo</h3><p>Cremosa, con queso gratinado.</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/img/fettuccine.jpg" alt="Fettuccine en salsa cremosa" loading="lazy">
+        <figcaption><h3>Fettuccine cremoso</h3><p>Salsa blanca y champiñones.</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/img/cubetazo-picada.jpg" alt="Cubetazo de cervezas y picadas" loading="lazy">
+        <figcaption><h3>Cubetazo y picadas</h3><p>Ideal para el partido y los amigos.</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/img/lomo-plancha.jpg" alt="Lomo a la plancha" loading="lazy">
+        <figcaption><h3>A la plancha</h3><p>Carnes al fuego vivo.</p></figcaption>
+      </figure>
+    </div>
+    <div class="wrap">
+      <p class="also reveal">También te esperan: <b>ceviche, salmón, pulpo</b> y postres de la casa.</p>
+      <div style="margin-top:24px" class="reveal"><a class="btn btn-ghost" href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener">Ver menú completo →</a></div>
+    </div>
+  </section>
+
+  <!-- LA NOCHE -->
+  <section id="noche" class="noche">
+    <div class="wrap noche-grid">
+      <div class="reveal">
+        <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Promotor.</b> Anuncia la agenda de la semana: orquesta, partidos, fechas especiales. Ustedes la actualizan en minutos.</div></div>
+        <span class="eyebrow">Cuando cae el sol</span>
+        <h2>La noche se vive <em>en La Pesca.</em></h2>
+        <p class="lead" style="margin-top:18px">Cócteles de colores, la orquesta sonando y la mesa llena. El plan perfecto para salir con las amigas, en pareja o con el combo.</p>
+        <ul class="agenda">
+          <li><span class="day">Jue – Sáb</span><div><b>Orquesta en vivo</b><span>Abrimos hasta las 10:30 p. m.</span></div></li>
+          <li><span class="day">Partidos</span><div><b>El partido lo ponemos nosotros</b><span>Cubetazo, picadas y pantalla.</span></div></li>
+          <li><span class="day">Todos los días</span><div><b>Cócteles de la casa</b><span>Margaritas clásicas, blue y de frutos rojos.</span></div></li>
+        </ul>
+      </div>
+      <div class="mosaic reveal">
+        <img src="assets/img/brindis-grupo.jpg" alt="Grupo de amigas brindando con cócteles" loading="lazy">
+        <img src="assets/img/brindis-orquesta.jpg" alt="Brindis con margaritas frente a la tarima de la orquesta" loading="lazy">
+        <img src="assets/img/margarita-barra.jpg" alt="Margarita frente a la barra" loading="lazy">
+        <img src="assets/img/brindis-risa.jpg" alt="Brindis con cóctel de frutos rojos" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA GENTE -->
+  <section id="gente">
+    <div class="wrap">
+      <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Relacionista público.</b> Muestra al equipo y sus actividades. Los videos que ya hacen para Instagram se reutilizan aquí y trabajan dos veces.</div></div>
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Nuestra gente</span>
+          <h2>Un equipo que <em>se goza</em> lo que hace.</h2>
+          <p class="lead">Detrás de cada plato y cada celebración hay gente que te recibe como en casa.</p>
+        </div>
+        <div class="carousel-nav" data-for="trackGente">
+          <button aria-label="Anterior"><svg><use href="#i-left"/></svg></button>
+          <button aria-label="Siguiente"><svg><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="track reveal" id="trackGente">
+      <figure class="reel">
+        <video data-auto src="assets/video/v1.mp4" poster="assets/img/poster-v1.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill"><i></i>Reel</span>
+        <button class="sound" aria-label="Activar sonido"><svg><use href="#i-mute"/></svg></button>
+        <figcaption><h3>5 razones para venir</h3><p>El partido lo ponemos nosotros.</p></figcaption>
+      </figure>
+      <figure class="reel">
+        <video data-auto src="assets/video/v2.mp4" poster="assets/img/celebracion.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill"><i></i>Reel</span>
+        <button class="sound" aria-label="Activar sonido"><svg><use href="#i-mute"/></svg></button>
+        <figcaption><h3>Celebraciones con alma</h3><p>Decoración, música y mesa lista.</p></figcaption>
+      </figure>
+      <figure class="reel">
+        <img src="assets/img/camarones-mesera.jpg" alt="Integrante del equipo sirviendo camarones crocantes" loading="lazy">
+        <figcaption><h3>Servido con cariño</h3><p>Camarones crocantes, recién salidos.</p></figcaption>
+      </figure>
+      <figure class="reel">
+        <img src="assets/img/cubetazo-picada.jpg" alt="Integrante del equipo llevando un cubetazo de cervezas" loading="lazy">
+        <figcaption><h3>Tu cubetazo, ya</h3><p>Bien frío, como debe ser.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section id="eventos" style="padding-top:0">
+    <div class="wrap eventos-grid">
+      <div class="eventos-media reveal">
+        <img src="assets/img/celebracion.jpg" alt="Mesa decorada con corazones y pétalos para una celebración" loading="lazy">
+        <div class="badge"><b>Cumpleaños, aniversarios y empresas</b>Decoración, menú y música para tu fecha.</div>
+      </div>
+      <div class="reveal">
+        <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Organizador de eventos.</b> Recoge fecha, número de personas y motivo, y entrega la solicitud completa por WhatsApp. Se acabó el "¿para cuándo y cuántos?" por DM.</div></div>
+        <span class="eyebrow">Celebra con nosotros</span>
+        <h2>Tu fecha especial, <em>a nuestro cargo.</em></h2>
+        <p class="lead" style="margin-top:16px">Cuéntanos qué quieres celebrar y te enviamos una propuesta.</p>
+        <form id="eventForm" novalidate>
+          <div>
+            <label style="margin-bottom:8px">¿Qué celebras?</label>
+            <div class="chips" role="radiogroup" aria-label="Tipo de evento">
+              <input type="radio" name="tipo" id="t1" value="Cumpleaños" checked><label for="t1">Cumpleaños</label>
+              <input type="radio" name="tipo" id="t2" value="Aniversario"><label for="t2">Aniversario</label>
+              <input type="radio" name="tipo" id="t3" value="Evento de empresa"><label for="t3">Empresa</label>
+              <input type="radio" name="tipo" id="t4" value="Otro"><label for="t4">Otro</label>
+            </div>
+          </div>
+          <label>Tu nombre<input name="nombre" autocomplete="name" required placeholder="¿Cómo te llamas?"></label>
+          <div class="row">
+            <label>Fecha<input type="date" name="fecha" required></label>
+            <label>Personas<input type="number" name="personas" min="1" max="300" inputmode="numeric" required placeholder="Ej. 12"></label>
+          </div>
+          <label>Detalles (opcional)<textarea name="notas" placeholder="Decoración, torta, hora aproximada…"></textarea></label>
+          <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Enviar solicitud por WhatsApp</button>
+          <p class="form-note" id="formNote">Te respondemos por WhatsApp con disponibilidad y propuesta.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section id="opiniones" class="opiniones">
+    <div class="wrap">
+      <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Vendedor.</b> Pone a la vista la reputación que ya se ganaron. Es lo primero que revisa quien no los conoce.</div></div>
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Lo que dicen de nosotros</span>
+          <h2>Nuestros clientes <em>hablan por nosotros.</em></h2>
+        </div>
+      </div>
+      <div class="scores reveal">
+        <a class="score" href="https://www.tripadvisor.es/Restaurant_Review-g297476-d17793059-Reviews-La_Pesca_Restaurante_Bar-Cartagena_Cartagena_District_Bolivar_Department.html" target="_blank" rel="noopener">
+          <span class="num">4.7</span>
+          <div><span class="stars">★★★★★</span><b>TripAdvisor</b><small>Basado en las reseñas de viajeros</small></div>
+        </a>
+        <div class="score">
+          <span class="num">4.6</span>
+          <div><span class="stars">★★★★★</span><b>Google</b><small>Cientos de reseñas de clientes</small></div>
+        </div>
+      </div>
+      <div class="highlights reveal">
+        <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11a7 7 0 0 1 14 0M12 4V2M4 15h16l-1 4H5z"/></svg><b>La comida</b><span>Lo que más destacan nuestros clientes.</span></div>
+        <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><b>El servicio</b><span>Atención cálida de principio a fin.</span></div>
+        <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><b>El ambiente</b><span>Decoración marinera y música en vivo.</span></div>
+        <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg><b>Parqueadero gratis</b><span>Llega en carro, sin estrés.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section id="preguntas">
+    <div class="wrap faq-grid">
+      <div class="reveal">
+        <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Recepcionista.</b> Responde a cualquier hora las preguntas que hoy les llegan una y otra vez por DM y WhatsApp.</div></div>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Antes de <em>venir.</em></h2>
+        <p class="lead" style="margin-top:16px">¿No encuentras tu respuesta? <a href="#" data-wa="Hola La Pesca 👋 Tengo una pregunta:" style="color:var(--amber-soft);text-decoration:underline;text-underline-offset:3px">Escríbenos por WhatsApp.</a></p>
+      </div>
+      <div class="reveal">
+        <details><summary>¿Tienen parqueadero?</summary><p>Sí, contamos con parqueadero gratuito para nuestros clientes.</p></details>
+        <details><summary>¿Cuál es el horario?</summary><p>De domingo a miércoles, de 11:30 a. m. a 9:30 p. m. De jueves a sábado, de 11:30 a. m. a 10:30 p. m.</p></details>
+        <details><summary>¿Cómo reservo una mesa?</summary><p>En línea desde <a href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener">nuestro sistema de reservas</a>, o por <a href="#" data-wa="Hola La Pesca 👋 Quiero reservar una mesa.">WhatsApp</a>.</p></details>
+        <details><summary>¿Celebran cumpleaños y eventos?</summary><p>¡Claro! Decoramos y preparamos todo para tu fecha. Llena el <a href="#eventos">formulario de eventos</a> y te enviamos la propuesta.</p></details>
+        <details><summary>¿Hay música en vivo?</summary><p>Sí, tenemos orquesta en vivo por las noches.</p></details>
+        <details><summary>¿Transmiten los partidos?</summary><p>Sí, el partido lo ponemos nosotros. Ven con tu combo y pide el cubetazo.</p></details>
+        <details><summary>¿Hacen domicilios?</summary><p>Sí. Pide desde <a href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener">nuestro menú en línea</a> o escríbenos por WhatsApp.</p></details>
+        <details><summary>¿Aceptan tarjetas? ¿El lugar es accesible?</summary><p>Aceptamos tarjetas de crédito y el lugar tiene acceso para sillas de ruedas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISÍTANOS -->
+  <section id="visitanos" style="padding-top:0">
+    <div class="wrap">
+      <div class="role"><svg><use href="#i-badge"/></svg><div><b>Empleado: Guía.</b> Dice si están abiertos ahora, a qué hora cierran y cómo llegar con un toque desde Google Maps o Waze.</div></div>
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <span class="eyebrow">Visítanos</span>
+          <h3 style="margin-top:14px">El Bosque, Cartagena</h3>
+          <address>Diagonal 21 #45-35, El Bosque<br>Cartagena de Indias, Bolívar</address>
+          <table class="hours" id="hours">
+            <tr data-days="1"><td>Lunes</td><td>11:30 a. m. – 9:30 p. m.</td></tr>
+            <tr data-days="2"><td>Martes</td><td>11:30 a. m. – 9:30 p. m.</td></tr>
+            <tr data-days="3"><td>Miércoles</td><td>11:30 a. m. – 9:30 p. m.</td></tr>
+            <tr data-days="4"><td>Jueves</td><td>11:30 a. m. – 10:30 p. m.</td></tr>
+            <tr data-days="5"><td>Viernes</td><td>11:30 a. m. – 10:30 p. m.</td></tr>
+            <tr data-days="6"><td>Sábado</td><td>11:30 a. m. – 10:30 p. m.</td></tr>
+            <tr data-days="0"><td>Domingo</td><td>11:30 a. m. – 9:30 p. m.</td></tr>
+          </table>
+          <div class="visit-ctas">
+            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=La+Pesca+Restaurante+Bar,+Diagonal+21+45-35,+Cartagena" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Cómo llegar</a>
+            <a class="btn btn-ghost" href="https://www.waze.com/live-map/directions/co/bolivar/cartagena-de-indias/la-pesca-restaurante-bar?to=place.ChIJL37RqCkl9o4Rmo3cR-3Ehgo" target="_blank" rel="noopener">Abrir en Waze</a>
+            <a class="btn btn-ghost" href="tel:+573022551907">Llamar</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Mapa de La Pesca Restaurante Bar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=La+Pesca+Restaurante+Bar,+Diagonal+21+%2345-35,+El+Bosque,+Cartagena&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PITCH (solo modo propuesta) -->
+  <section class="pitch" id="propuesta">
+    <div class="wrap">
+      <span class="eyebrow">Su nuevo empleado</span>
+      <h2 style="margin-top:14px">Trabaja 24/7, no pide vacaciones <em>y atiende a todos a la vez.</em></h2>
+      <div class="pitch-grid">
+        <div class="pitch-item"><b>Atiende</b><span>Responde horario, parqueadero, domicilios y eventos sin que nadie del equipo deje lo que está haciendo.</span></div>
+        <div class="pitch-item"><b>Vende</b><span>Convierte a cada visitante en una reserva por Jeicy o en una conversación de WhatsApp con los datos listos.</span></div>
+        <div class="pitch-item"><b>Los encuentra</b><span>Les da presencia en Google para búsquedas como "restaurante de mariscos en El Bosque" o "dónde celebrar un cumpleaños en Cartagena".</span></div>
+      </div>
+      <div class="pitch-alert">
+        <p><b>Hoy, quien los busca en Google no llega a ustedes.</b> El enlace de reservas que usan se muestra a los buscadores con el nombre "Jeicy" y sin contenido. Esta página trabaja con su sistema de reservas, no lo reemplaza: le pone su nombre, sus platos y su ambiente frente a quien los está buscando.</p>
+      </div>
+      <p class="sign">Propuesta preparada por Ángel Sulbarán · Desarrollo web</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#" class="logo"><b>La Pesca</b><small>RESTAURANTE · BAR</small></a>
+      <p style="margin-top:14px">© <span id="year"></span> La Pesca Restaurante Bar · Cartagena de Indias</p>
+    </div>
+    <div class="social">
+      <a href="https://www.instagram.com/la_pescactg" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a href="https://www.facebook.com/lapescactg/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="#" data-wa="Hola La Pesca 👋" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Hola La Pesca 👋 Quisiera información." aria-label="Escribir por WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<nav class="mobile-bar" aria-label="Acciones rápidas">
+  <a href="https://go.jeicy.co/lapesca" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg>Reservar</a>
+  <a href="#" data-wa="Hola La Pesca 👋 Quisiera información."><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=La+Pesca+Restaurante+Bar,+Diagonal+21+45-35,+Cartagena" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Llegar</a>
+</nav>
+
+<button class="toggle-proposal" id="toggleProposal" aria-pressed="true"><span class="sw"></span>Modo propuesta</button>
+
+<script>
+(() => {
+  const WA_NUMBER = '573022551907';
+  const root = document.documentElement;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Modo propuesta: visible por defecto en el demo; se recuerda la preferencia del visitante.
+  const toggle = document.getElementById('toggleProposal');
+  let proposalOn = true;
+  try { const saved = localStorage.getItem('lp-proposal'); if (saved !== null) proposalOn = saved === '1'; } catch (e) {}
+  const applyProposal = () => {
+    document.body.classList.toggle('proposal', proposalOn);
+    toggle.setAttribute('aria-pressed', String(proposalOn));
+    const banner = document.getElementById('banner');
+    root.style.setProperty('--banner-h', proposalOn ? banner.offsetHeight + 'px' : '0px');
+  };
+  toggle.addEventListener('click', () => {
+    proposalOn = !proposalOn;
+    try { localStorage.setItem('lp-proposal', proposalOn ? '1' : '0'); } catch (e) {}
+    applyProposal();
+  });
+  applyProposal();
+
+  // Enlaces de WhatsApp con mensaje prellenado
+  const waLink = (text) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+  document.querySelectorAll('[data-wa]').forEach(a => {
+    a.href = waLink(a.dataset.wa);
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // Barra de navegación al hacer scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Abierto / cerrado según la hora de Cartagena (UTC-5)
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' }));
+  const day = now.getDay();
+  const minutes = now.getHours() * 60 + now.getMinutes();
+  const OPEN = 11 * 60 + 30;
+  const closeFor = d => (d >= 4 && d <= 6) ? 22 * 60 + 30 : 21 * 60 + 30;
+  const fmt = m => { const h = Math.floor(m / 60), mm = String(m % 60).padStart(2, '0'); return `${h > 12 ? h - 12 : h}:${mm} ${h >= 12 ? 'p. m.' : 'a. m.'}`; };
+  const status = document.getElementById('status');
+  const close = closeFor(day);
+  if (minutes >= OPEN && minutes < close) {
+    status.querySelector('span').textContent = `Abierto ahora · hasta las ${fmt(close)}`;
+  } else {
+    status.classList.add('closed');
+    status.querySelector('span').textContent = minutes < OPEN ? `Abrimos hoy a las ${fmt(OPEN)}` : `Cerrado · abrimos mañana a las ${fmt(OPEN)}`;
+  }
+  document.querySelector(`#hours tr[data-days="${day}"]`)?.classList.add('today');
+
+  // Carruseles
+  document.querySelectorAll('.carousel-nav').forEach(navEl => {
+    const track = document.getElementById(navEl.dataset.for);
+    const [prev, next] = navEl.querySelectorAll('button');
+    const step = () => (track.firstElementChild?.getBoundingClientRect().width || 300) + 16;
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: reduceMotion ? 'auto' : 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: reduceMotion ? 'auto' : 'smooth' }));
+  });
+
+  // Videos: se reproducen solo cuando están en pantalla
+  const hero = document.getElementById('heroVideo');
+  const autoVideos = [hero, ...document.querySelectorAll('video[data-auto]')];
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const vio = new IntersectionObserver(entries => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (isIntersecting) { target.preload = 'auto'; target.play().catch(() => {}); }
+        else target.pause();
+      });
+    }, { threshold: 0.35 });
+    autoVideos.forEach(v => vio.observe(v));
+  }
+
+  // Botón de sonido en los reels
+  document.querySelectorAll('.sound').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = btn.parentElement.querySelector('video');
+      const unmute = v.muted;
+      document.querySelectorAll('.reel video').forEach(o => { o.muted = true; });
+      document.querySelectorAll('.sound use').forEach(u => u.setAttribute('href', '#i-mute'));
+      v.muted = !unmute;
+      if (unmute) { v.play().catch(() => {}); btn.querySelector('use').setAttribute('href', '#i-sound'); }
+      btn.setAttribute('aria-label', unmute ? 'Silenciar' : 'Activar sonido');
+    });
+  });
+
+  // Formulario de eventos → WhatsApp
+  const form = document.getElementById('eventForm');
+  const fecha = form.elements.fecha;
+  fecha.min = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = form.elements;
+    const note = document.getElementById('formNote');
+    if (!f.nombre.value.trim() || !f.fecha.value || !f.personas.value) {
+      note.textContent = 'Completa tu nombre, la fecha y el número de personas.';
+      note.style.color = 'var(--coral)';
+      (!f.nombre.value.trim() ? f.nombre : !f.fecha.value ? f.fecha : f.personas).focus();
+      return;
+    }
+    const fechaTxt = new Date(f.fecha.value + 'T12:00').toLocaleDateString('es-CO', { weekday: 'long', day: 'numeric', month: 'long' });
+    const msg = [
+      'Hola La Pesca 👋 Quiero cotizar un evento:',
+      `• Tipo: ${f.tipo.value}`,
+      `• Nombre: ${f.nombre.value.trim()}`,
+      `• Fecha: ${fechaTxt}`,
+      `• Personas: ${f.personas.value}`,
+      f.notas.value.trim() ? `• Detalles: ${f.notas.value.trim()}` : ''
+    ].filter(Boolean).join('\n');
+    note.textContent = 'Abriendo WhatsApp…';
+    note.style.color = '';
+    window.open(waLink(msg), '_blank', 'noopener');
+  });
+
+  // Aparición suave al hacer scroll
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const rio = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); rio.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => rio.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  document.getElementById('year').textContent = now.getFullYear();
+})();
+</script>
+</body>
+</html>
